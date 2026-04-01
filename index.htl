@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here — Learn Java Step by Step</title>
+
+  <!-- SEO -->
+  <meta name="description" content="A simple step-by-step path to learn Java from scratch to building your first assignment. Clean, structured, and easy to follow.">
+  <meta name="keywords" content="learn Java, Java basics, Java tutorial, JFrame, beginner programming, coding lessons">
+  <meta name="author" content="Dylan Gorrah">
+
+  <!-- Open Graph (for sharing) -->
+  <meta property="og:title" content="Start Here — Learn Java Step by Step">
+  <meta property="og:description" content="Follow a clean, simple path from Java basics to building your first real assignment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dylan-gorrah.github.io/">
+
+  <!-- Mobile Theme Color -->
+  <meta name="theme-color" content="#0f0f10">
+
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --text: #eaeaea;
+      --muted: #888;
+      --accent: #ffffff;
+    }
+
+    body.light {
+      --bg: #ffffff;
+      --text: #111;
+      --muted: #666;
+      --accent: #000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100dvh;
+      transition: all 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* Glass top bar */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: flex-end;
+      z-index: 10;
+    }
+
+    body.light .topbar {
+      background: rgba(255,255,255,0.6);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .toggle {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 10px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 14px;
+      background: transparent;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .toggle:hover {
+      transform: scale(1.05);
+    }
+
+    body.light .toggle {
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-weight: 500;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .link {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 18px;
+      margin-bottom: 16px;
+      border-radius: 14px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    body.light .link {
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .link:active {
+      transform: scale(0.97);
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+    }
+
+    body.light .footer {
+      color: rgba(0,0,0,0.2);
+    }
+
+    /* Floating particles */
+    .particle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      animation: float 20s linear infinite;
+    }
+
+    body.light .particle {
+      background: rgba(0,0,0,0.1);
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+    }
+
+    body.light ::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="toggle" onclick="toggleMode()">☾</div>
+</div>
+
+<div class="container">
+  <h1>Start Here</h1>
+  <p>This is your roadmap. Follow it step by step — don’t skip.</p>
+
+  <a class="link" href="https://dylan-gorrah.github.io/Java-from-Zero/" target="_blank">
+    <div class="title">1. Java From Zero</div>
+    <div class="desc">We start simple. Core basics. No shortcuts.</div>
+  </a>
+
+  <a class="link" href="https://dylan-gorrah.github.io/road-to-Assignment-part1/" target="_blank">
+    <div class="title">2. Road to Assignment</div>
+    <div class="desc">Now we level up. Combining logic with structure.</div>
+  </a>
+
+  <a class="link" href="https://dylan-gorrah.github.io/Java-Assignment.-ready-doc-from-jframe-to-logic/" target="_blank">
+    <div class="title">3. Final Build</div>
+    <div class="desc">Putting everything together. Real assignment ready.</div>
+  </a>
+
+  <div class="footer">by Dylan Gorrah</div>
+</div>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("light");
+  }
+
+  // generate particles
+  for (let i = 0; i < 25; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (15 + Math.random() * 20) + 's';
+    p.style.opacity = Math.random();
+    document.body.appendChild(p);
+  }
+</script>
+
+</body>
+</html>
